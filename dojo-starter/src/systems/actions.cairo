@@ -12,7 +12,7 @@ trait IActions {
 mod actions {
     use super::{IActions, next_position};
     use starknet::{ContractAddress, get_caller_address};
-    use dojo_starter::models::{Game::{ContractAddress, felt}};
+    use dojo_starter::models::{Game::{ContractAddress, u32}};
 
     #[abi(embed_v0)]
     impl ActionsImpl of IActions<ContractState> {
