@@ -1,13 +1,10 @@
 use dojo_starter::models::moves::Direction;
 use dojo_starter::models::position::Position;
 
-
-var next_id : felt = 0; 
-
 // define the interface
 #[dojo::interface]
 trait IActions {
-    fn startGame();
+    fn start_game();
 }
 
 // dojo decorator
@@ -19,11 +16,11 @@ mod actions {
 
     #[abi(embed_v0)]
     impl ActionsImpl of IActions<ContractState> {
-        fn startGame(world: IWorldDispatcher) ->(Game){
+        fn start_game(world: IWorldDispatcher) ->(Game){
             let player = get_caller_address();
             // create a new object of Game and get the unique Id of the Game and return
-            next_id = next_id + 1
-            let new_game : Game = Game(next_id, player, 0); 
+            let game_id = world.uuid();
+            let new_game : Game = Game(game_id, player, 0); 
             return new_game;
         }
     }
