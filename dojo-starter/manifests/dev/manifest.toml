@@ -18,14 +18,36 @@ name = "dojo::base::base"
 [[contracts]]
 kind = "DojoContract"
 address = "0x7ec42d76c6d876b8f219c20b6a152fe35fe2afc62c471b29ba689c2f6a075b3"
-class_hash = "0x7d17f102164e9f0dc5450b33b19e2a52d17665ddb089b8dc40d3552d36bfaf2"
-original_class_hash = "0x7d17f102164e9f0dc5450b33b19e2a52d17665ddb089b8dc40d3552d36bfaf2"
+class_hash = "0x308a411e174bf4156c7dfaa9a501fd1e9f964ba03c3cc852c0f0224b5625e18"
+original_class_hash = "0x308a411e174bf4156c7dfaa9a501fd1e9f964ba03c3cc852c0f0224b5625e18"
 base_class_hash = "0x679177a2cb757694ac4f326d01052ff0963eac0bc2a17116a2b87badcdf6f76"
 abi = "abis/deployments/contracts/dojo_starter_systems_actions_actions.json"
 reads = []
 writes = []
 computed = []
 name = "dojo_starter::systems::actions::actions"
+
+[[models]]
+kind = "DojoModel"
+class_hash = "0x553bd34b11824819f20e1eabe206daa274d1d3b5f7dbfa983fddbc2de249b0a"
+original_class_hash = "0x553bd34b11824819f20e1eabe206daa274d1d3b5f7dbfa983fddbc2de249b0a"
+abi = "abis/deployments/models/dojo_starter_models_game_game.json"
+name = "dojo_starter::models::game::game"
+
+[[models.members]]
+name = "id"
+type = "u32"
+key = true
+
+[[models.members]]
+name = "player"
+type = "ContractAddress"
+key = false
+
+[[models.members]]
+name = "score"
+type = "u32"
+key = false
 
 [[models]]
 kind = "DojoModel"
