@@ -21,4 +21,4 @@ If you are using windows, trying doing this all in wsl, you can download it from
    - let's go the client code now, so go the client directory
    - install all dependencies using the command `npm install`
    - run the client using command `npm run dev`
-   - go to `http://localhost:5173/` and checkout the basic application.
+   - go to `http://localhost:5173/` and checkout the basic application. (mini change)
