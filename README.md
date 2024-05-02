@@ -22,3 +22,4 @@ If you are using windows, trying doing this all in wsl, you can download it from
    - install all dependencies using the command `npm install`
    - run the client using command `npm run dev`
    - go to `http://localhost:5173/` and checkout the basic application.
+   - now ideally the workflow should trigger
