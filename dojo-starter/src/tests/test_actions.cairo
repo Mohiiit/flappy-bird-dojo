@@ -2,7 +2,7 @@
 mod tests {
     // use super::*;
     use starknet::ContractAddress;
-    use dojo::world::IWorldDispatcher;
+    use dojo::world::{IWorldDispatcher, IWorldDispatcherTrait};
     use dojo::test_utils::{spawn_test_world, deploy_contract};
     use dojo_starter::models::game::{Game, game};
     use dojo_starter::{
@@ -17,7 +17,7 @@ mod tests {
         let mut models = array![game::TEST_CLASS_HASH];
         let world = spawn_test_world(models);
         let contract_address = world
-            .deploy_contract("salt", actions::TEST_CLASS_HASH.try_into().unwrap());
+            .deploy_contract('salt', actions::TEST_CLASS_HASH.try_into().unwrap());
         let actions_system = IActionsDispatcher { contract_address };
 
         // Call start_game
