@@ -3,7 +3,8 @@ use dojo_starter::models::game::Game;
 // define the interface
 #[dojo::interface]
 trait IActions {
-    fn start_game() -> Game;
+    fn start_game(world:IWorldDispatcher) -> Game;
+    fn end_game(game:Game) -> None;
 }
 
 // dojo decorator
@@ -19,8 +20,11 @@ mod actions {
             let player = get_caller_address();
             // create a new object of Game and get the unique Id of the Game and return
             let game_id = world.uuid();
-            let new_game : Game = Game{id: game_id, player: player, score: 0}; 
+            let new_game : Game = Game{id: game_id, player: player, score: 0, state: GameStage::InProgress}; 
             return new_game;
+        }
+        fn end_game(game: Game) {
+            game::state = GameStage::Over;
         }
     }
 }
