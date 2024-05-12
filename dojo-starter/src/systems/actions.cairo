@@ -26,6 +26,7 @@ mod actions {
         fn end_game(world: IWorldDispatcher, id: u32) {
             let mut game = get!(world, id, (Game))
             game::state = GameStage::Over;
+            set!(world, (game));
         }
     }
 }
