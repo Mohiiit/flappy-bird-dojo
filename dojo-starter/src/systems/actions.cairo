@@ -4,7 +4,7 @@ use dojo_starter::models::game::Game;
 #[dojo::interface]
 trait IActions {
     fn start_game(world:IWorldDispatcher) -> Game;
-    fn end_game(game:Game) -> None;
+    fn end_game(game:Game);
 }
 
 // dojo decorator
