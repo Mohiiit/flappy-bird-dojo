@@ -4,7 +4,7 @@ use dojo_starter::models::game::Game;
 #[dojo::interface]
 trait IActions {
     fn start_game(world:IWorldDispatcher) -> Game;
-    fn end_game(game:Game);
+    fn end_game(world:IWorldDispatcher, id:u32);
 }
 
 // dojo decorator
@@ -23,7 +23,8 @@ mod actions {
             let new_game : Game = Game{id: game_id, player: player, score: 0, state: GameStage::InProgress}; 
             return new_game;
         }
-        fn end_game(game: Game) {
+        fn end_game(world: IWorldDispatcher, id: u32) {
+            let mut game = get!(world, id, (Game))
             game::state = GameStage::Over;
         }
     }
