@@ -1,0 +1,15 @@
+kind = "DojoModel"
+class_hash = "0x7cd402772777f79a01f526c565f25883249d67f0dc07d3402b4080a40f8ebe1"
+original_class_hash = "0x7cd402772777f79a01f526c565f25883249d67f0dc07d3402b4080a40f8ebe1"
+abi = "manifests/dev/abis/base/models/dojo_starter_models_highScore_score_to_player_mapping.json"
+name = "dojo_starter::models::highScore::score_to_player_mapping"
+
+[[members]]
+name = "score"
+type = "u32"
+key = false
+
+[[members]]
+name = "player"
+type = "ContractAddress"
+key = true

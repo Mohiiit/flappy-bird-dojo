@@ -1,0 +1,60 @@
+kind = "DojoModel"
+class_hash = "0x4e8f07da17a4a44bb69c9d00264d75b1407e8cd20c739796046bb69c89c00ab"
+original_class_hash = "0x4e8f07da17a4a44bb69c9d00264d75b1407e8cd20c739796046bb69c89c00ab"
+abi = "manifests/dev/abis/base/models/dojo_starter_models_highScore_high_scores.json"
+name = "dojo_starter::models::highScore::high_scores"
+
+[[members]]
+name = "seed"
+type = "u32"
+key = true
+
+[[members]]
+name = "score1"
+type = "ScoreToPlayerMapping"
+key = false
+
+[[members]]
+name = "score2"
+type = "ScoreToPlayerMapping"
+key = false
+
+[[members]]
+name = "score3"
+type = "ScoreToPlayerMapping"
+key = false
+
+[[members]]
+name = "score4"
+type = "ScoreToPlayerMapping"
+key = false
+
+[[members]]
+name = "score5"
+type = "ScoreToPlayerMapping"
+key = false
+
+[[members]]
+name = "score6"
+type = "ScoreToPlayerMapping"
+key = false
+
+[[members]]
+name = "score7"
+type = "ScoreToPlayerMapping"
+key = false
+
+[[members]]
+name = "score8"
+type = "ScoreToPlayerMapping"
+key = false
+
+[[members]]
+name = "score9"
+type = "ScoreToPlayerMapping"
+key = false
+
+[[members]]
+name = "score10"
+type = "ScoreToPlayerMapping"
+key = false

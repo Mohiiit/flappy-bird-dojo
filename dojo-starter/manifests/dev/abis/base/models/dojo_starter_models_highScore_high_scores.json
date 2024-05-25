@@ -169,34 +169,76 @@
   },
   {
     "type": "impl",
-    "name": "gameImpl",
-    "interface_name": "dojo_starter::models::game::Igame"
+    "name": "high_scoresImpl",
+    "interface_name": "dojo_starter::models::highScore::Ihigh_scores"
   },
   {
     "type": "struct",
-    "name": "dojo_starter::models::game::Game",
+    "name": "dojo_starter::models::highScore::ScoreToPlayerMapping",
     "members": [
-      {
-        "name": "id",
-        "type": "core::integer::u32"
-      },
-      {
-        "name": "player",
-        "type": "core::starknet::contract_address::ContractAddress"
-      },
       {
         "name": "score",
         "type": "core::integer::u32"
       },
       {
-        "name": "state",
+        "name": "player",
+        "type": "core::starknet::contract_address::ContractAddress"
+      }
+    ]
+  },
+  {
+    "type": "struct",
+    "name": "dojo_starter::models::highScore::HighScores",
+    "members": [
+      {
+        "name": "seed",
         "type": "core::integer::u32"
+      },
+      {
+        "name": "score1",
+        "type": "dojo_starter::models::highScore::ScoreToPlayerMapping"
+      },
+      {
+        "name": "score2",
+        "type": "dojo_starter::models::highScore::ScoreToPlayerMapping"
+      },
+      {
+        "name": "score3",
+        "type": "dojo_starter::models::highScore::ScoreToPlayerMapping"
+      },
+      {
+        "name": "score4",
+        "type": "dojo_starter::models::highScore::ScoreToPlayerMapping"
+      },
+      {
+        "name": "score5",
+        "type": "dojo_starter::models::highScore::ScoreToPlayerMapping"
+      },
+      {
+        "name": "score6",
+        "type": "dojo_starter::models::highScore::ScoreToPlayerMapping"
+      },
+      {
+        "name": "score7",
+        "type": "dojo_starter::models::highScore::ScoreToPlayerMapping"
+      },
+      {
+        "name": "score8",
+        "type": "dojo_starter::models::highScore::ScoreToPlayerMapping"
+      },
+      {
+        "name": "score9",
+        "type": "dojo_starter::models::highScore::ScoreToPlayerMapping"
+      },
+      {
+        "name": "score10",
+        "type": "dojo_starter::models::highScore::ScoreToPlayerMapping"
       }
     ]
   },
   {
     "type": "interface",
-    "name": "dojo_starter::models::game::Igame",
+    "name": "dojo_starter::models::highScore::Ihigh_scores",
     "items": [
       {
         "type": "function",
@@ -204,7 +246,7 @@
         "inputs": [
           {
             "name": "model",
-            "type": "dojo_starter::models::game::Game"
+            "type": "dojo_starter::models::highScore::HighScores"
           }
         ],
         "outputs": [],
@@ -214,7 +256,7 @@
   },
   {
     "type": "event",
-    "name": "dojo_starter::models::game::game::Event",
+    "name": "dojo_starter::models::highScore::high_scores::Event",
     "kind": "enum",
     "variants": []
   }
