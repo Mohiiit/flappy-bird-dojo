@@ -169,34 +169,34 @@
   },
   {
     "type": "impl",
-    "name": "gameImpl",
-    "interface_name": "dojo_starter::models::game::Igame"
+    "name": "playerImpl",
+    "interface_name": "dojo_starter::models::player::Iplayer"
   },
   {
     "type": "struct",
-    "name": "dojo_starter::models::game::Game",
+    "name": "dojo_starter::models::player::Player",
     "members": [
       {
-        "name": "id",
-        "type": "core::integer::u32"
-      },
-      {
-        "name": "player",
+        "name": "address",
         "type": "core::starknet::contract_address::ContractAddress"
       },
       {
-        "name": "score",
+        "name": "score1",
         "type": "core::integer::u32"
       },
       {
-        "name": "state",
+        "name": "score2",
+        "type": "core::integer::u32"
+      },
+      {
+        "name": "score3",
         "type": "core::integer::u32"
       }
     ]
   },
   {
     "type": "interface",
-    "name": "dojo_starter::models::game::Igame",
+    "name": "dojo_starter::models::player::Iplayer",
     "items": [
       {
         "type": "function",
@@ -204,7 +204,7 @@
         "inputs": [
           {
             "name": "model",
-            "type": "dojo_starter::models::game::Game"
+            "type": "dojo_starter::models::player::Player"
           }
         ],
         "outputs": [],
@@ -214,7 +214,7 @@
   },
   {
     "type": "event",
-    "name": "dojo_starter::models::game::game::Event",
+    "name": "dojo_starter::models::player::player::Event",
     "kind": "enum",
     "variants": []
   }
